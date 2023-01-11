@@ -1,1 +1,275 @@
-Hello world
+
+<!DOCTYPE html>
+<html>
+<title>Eric Huang</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>Eric Huang</b>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#coursework" class="w3-bar-item w3-button">Coursework</a>
+      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="pic.jpg" alt="background" width="1500" height="900">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-off"><b>Eric Huang</b></span> <!-- <span class="w3-xxxlarge w3-text-white">Sienko</span> --></h1>
+  </div>
+</header>
+
+
+  <!-- Container (About Section) -->
+<div class="w3-container w3-center w3-padding-40" id="about">	
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="font-size:25px">ABOUT ME</h3>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="seniorpic.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Senior pic" width="400" height = auto>
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-padding-large">
+      <p style="font-size:24px;" align=left>
+     	Hello, I'm Eric! I am an undergraduate student at University of California, Berkeley double majoring in Electrical Engineering and Computer Science, and Data Science. Here's what I've been up to over the past few years!</p>
+      <a href="ResumeBasic.pdf" target="_blank">
+    <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> Resum&eacute;
+      </button></a>
+    </div>
+  </div>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+/* Create three equal columns that floats next to each other */
+.column3 {
+    float: left;
+    width: 33%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+</style>
+<!-- <div class="w3-container w3-border-light-grey w3-center w3-padding-16" id="coursework"> -->
+	<div class="w3-container w3-border-light-grey w3-center w3-row w3-center w3-light-grey w3-padding-16" id="coursework">
+		<div class="w3-container w3-center w3-padding-42 w3-margin-bottom">
+			<h3 style="font-size: 25px" class="w3-border-bottom w3-border-light-black w3-padding-16"> COURSEWORK</h3>
+		</div>
+		<div class="row">
+		  <div align="left" class="column3">
+		  	<h1 style="font-size: 20px">COMPUTER SCIENCE:</h1>
+        <p>Data Structures & Algorithms-<a href="https://inst.eecs.berkeley.edu/~cs61b/sp22/" title="CS 61B class website" target="_blank">CS61B</a></p>
+        <p>Machine Structures-<a href="https://cs61c.org/fa22/" title="CS 61C class website" target="_blank">CS61C</a></p>
+        <p>Discrete Math & Probability Theory-<a href="http://www.eecs70.org/" title="CS 70 class website" target="_blank">CS70</a></p>
+        <p>Computer Security-<a href="https://fa22.cs161.org/" title="CS 161 class website" target="_blank">CS161</a></p>
+		  	<p>Efficient Algorithms & Intractable Problems-<a href="https://cs170.org/" title="CS 170 class website" target="_blank">CS170</a></p>
+        <p>Introduction to Database Systems-<a href="https://cs186berkeley.net/" title="CS 186 class website" target="_blank">CS186</a></p>
+				<p>Introduction to Artificial Intelligence-<a href="https://inst.eecs.berkeley.edu/~cs188/fa22/" title="CS 188 class website" target="_blank">CS188</a></p>				
+			</div>
+			<div align="left" class="column3">
+				<h1 style="font-size: 20px">DATA SCIENCE:</h1>
+				<p>The Foundations of Data Science-<a href="http://www.data8.org/sp23/" title="Data 8 class website" target="_blank">DATA 8</a></p>    
+			</div>
+			<div align="left" class="column3">
+				<h1 style="font-size: 20px">ELECTRICAL ENGINEERING:</h1>
+				<p>Designing Information Systems I-<a href="http://inst.eecs.berkeley.edu/~ee16a/fa21/" title="EE16A class website" target="_blank">EE16A</a></p>
+				<p>Designing Information Systems II-<a href="http://inst.eecs.berkeley.edu/~ee16b/sp22/" title="EE16B class website" target="_blank">EE16B</a></p>
+			</div>
+		</div>
+	</div>
+<!-- </div> -->
+<div class=row>
+	<h3 style="font-size: 40px"> </h3>
+</div>
+<!-- Projects Section -->
+<div class="w3-row-padding w3-light-grey w3-padding-16" >
+	<div class="w3-container w3-center w3-padding-32" id="projects">
+    	<h3 style="font-size: 25px" class="w3-border-bottom w3-border-light-black w3-padding-16">MY PROJECTS</h3>
+	</div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <h3>Blocks</h3>
+      <a href="https://inst.eecs.berkeley.edu/~cs61b/sp22/materials/proj/proj0/index.html" target="_blank">
+        <img src="blocks.jpg" alt="Blocks" style="width:100%";
+        height:42px;border:0;>
+      </a>    	
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <h3>The Enigma Machine</h3>
+      <a href="https://inst.eecs.berkeley.edu/~cs61b/sp22/materials/proj/proj1/index.html" target="_blank">
+        <img src="enigma.jpg" alt="Enigma" style="width:100%";
+        height:42px;border:0;>
+      </a>    	
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <h3>Ataxx</h3>
+      <a ref="https://inst.eecs.berkeley.edu/~cs61b/sp22/materials/proj/proj2/index.html" target="_blank">
+        <img src="ataxx.jpg" alt="Ataxx" style="width:100%";
+        height:42px;border:0;>
+      </a>    	
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <h3>Gitlet</h3>
+      <a href="https://inst.eecs.berkeley.edu/~cs61b/sp22/materials/proj/proj3/index.html" target="_blank">
+        <img src="gitlet.jpg" alt="Gitlet" style="width:100%";
+        height:42px;border:0;>
+      </a>    	
+    </div>
+</div>
+<div class='w3-row-padding w3-light-grey'>
+	<div class="w3-col l3 m6 w3-margin-bottom">
+      <p class="w3-opacity">CS61B [Spring 2022]</p>
+      <p>A recreation of the popular Blocks Puzzle game.</p>    	
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <p class="w3-opacity">CS61B [Spring 2022]</p>
+      <p>Computer version of the infamous Enigma machines used by Germany in WW2.</p>    	
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <p class="w3-opacity">CS61B [Spring 2022]</p>
+      <p>A recreation of the popular Ataxx board game and AI Computer.</p>    	
+    </div>	
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <p class="w3-opacity">CS61B [Spring 2022]</p>
+      <p>Redesigned implementation of a version-control system similar to Git</p>    	
+    </div>
+</div>
+<div class='w3-row-padding w3-light-grey'>
+  <div class="w3-col l3 m6 w3-margin-bottom">  	
+      <h3>SIXT33N</h3>
+      <a href="https://eecs16b.org/lab/notes/lab_note1.pdf" target="_blank">
+        <img src="sixt33n.jpg" alt="sixt33n" style="width:100%";
+        height:42px;border:0;>
+      </a>
+    </div>
+	<div class="w3-col l3 m6 w3-margin-bottom">   	
+      <h3>Snake</h3>
+      <a href="https://cs61c.org/fa22/projects/proj1/" target="_blank">
+        <img src="snek.jpg" alt="Snek" style="width:100%";
+        height:42px;border:0;>
+      </a>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <h3>Classify</h3>
+      <a href="https://cs61c.org/fa22/projects/proj2/" target="_blank">
+        <img src="classify.jpg" alt="Classify" style="width:100%";
+        height:42px;border:0;>
+      </a>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">    	
+      <h3>CPU</h3>
+      <a href="https://cs61c.org/fa22/projects/proj3/" target="_blank">
+        <img src="cpu.jpg" alt="CPU" style="width:100%";
+        height:42px;border:0;>
+      </a>
+    </div>
+</div>
+<div class='w3-row-padding w3-light-grey'>
+  <div class="w3-col l3 m6 w3-margin-bottom">    	
+    <p class="w3-opacity">EECS16B [Spring 2022]</p>
+    <p>A three wheel mobile robot that responds to stimulus in the form of sounds.</p>
+  </div>
+	<div class="w3-col l3 m6 w3-margin-bottom">   	
+      <p class="w3-opacity">CS61C [Fall 2022]</p>
+      <p>A recreation of the popular Snake computer game.</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">    	
+      <p class="w3-opacity">CS61C [Fall 2022]</p>
+      <p>An assembly based code to classify handwritten digits with machine learning.</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">    	
+      <p class="w3-opacity">CS61C [Fall 2022]</p>
+      <p>Building a CPU capable of running RISC-V assembly instructions.</p>
+    </div>
+</div>
+<div class='w3-row-padding w3-light-grey'>
+  <div class="w3-col l3 m6 w3-margin-bottom">  	
+      <h3>Cryptographic Dropbox</h3>
+      <a href="https://fa22.cs161.org/proj2/" target="_blank">
+        <img src="dropbox.jpg" alt="Dropbox" style="width:100%";
+        height:42px;border:0;>
+      </a>
+    </div>
+	<div class="w3-col l3 m6 w3-margin-bottom">   	
+      <h3>Pac-Man</h3>
+      <a href="https://inst.eecs.berkeley.edu/~cs188/fa22/projects/" target="_blank">
+        <img src="pacman.png" alt="Pac-Man" style="width:100%";
+        height:42px;border:0;>
+      </a>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <h3>Classify V.2</h3>
+      <a href="https://inst.eecs.berkeley.edu/~cs188/fa22/projects/proj5/" target="_blank">
+        <img src="classify2.jpg" alt="Classify2" style="width:100%";
+        height:42px;border:0;>
+      </a>
+    </div>
+</div>
+<div class='w3-row-padding w3-light-grey'>
+  <div class="w3-col l3 m6 w3-margin-bottom">    	
+    <p class="w3-opacity">CS161 [Fall 2022]</p>
+    <p>An end-to-end encrypted, efficient file sharing system that provides guaranteed confidentiality, integrity, and authenticity.</p>
+  </div>
+	<div class="w3-col l3 m6 w3-margin-bottom">   	
+      <p class="w3-opacity">CS188 [Fall 2022]</p>
+      <p>AI that utilizes reinforced learning and value iteration to solve the popular Pac-Man computer game.</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">    	
+      <p class="w3-opacity">CS188 [Fall 2022]</p>
+      <p>Building a neural network to classify handwritten digits with machine learning.</p>
+    </div>
+</div>
+<p>To follow Berkeley's academic integrity policies, I will not post any of my work online. If you would like to see my code, feel free to contant me below!</p>
+
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-center w3-padding-32" id="contact">
+    <h3 style="font-size: 25px" class="w3-border-bottom w3-border-light-grey w3-padding-16">CONTACT</h3>
+
+    <form action="huanger@berkeley.edu" method="post" target="_blank">
+      <input class="w3-input" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-section" type="text" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section" type="text" placeholder="Subject" required name="Subject">
+      <input class="w3-input w3-section" type="text" placeholder="Comment" required name="Comment">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+  
+<!-- End page content -->
+</div>
+</body>
+</html>
