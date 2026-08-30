@@ -5,6 +5,65 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent: #2563eb;
+    --accent-dark: #1d4ed8;
+    --text-dark: #1a1a1a;
+    --bg-soft: #f5f6f8;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text-dark); }
+  h1, h2, h3 { font-family: 'Poppins', 'Inter', sans-serif; }
+  a { color: var(--accent); }
+  a:hover { color: var(--accent-dark); }
+  h3.w3-padding-16 { border-bottom: 3px solid var(--accent) !important; letter-spacing: 1px; font-weight: 600; }
+  .w3-bar-item.w3-button:hover { color: var(--accent) !important; background: transparent !important; }
+  .btn-accent { background: var(--accent) !important; color: #fff !important; border-radius: 999px !important; padding: 12px 28px !important; font-weight: 600; letter-spacing: .3px; border: none !important; transition: background .2s ease, transform .2s ease; }
+  .btn-accent:hover { background: var(--accent-dark) !important; transform: translateY(-2px); }
+  .hero { position: relative; height: 480px; background-image: url('pic.jpg'); background-size: cover; background-position: center 22%; display: flex; align-items: center; justify-content: center; }
+  .hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35)); }
+  .hero-content { position: relative; z-index: 1; text-align: center; color: #fff; padding: 0 20px; }
+  .hero-content h1 { font-size: 3rem; margin: 0 0 10px; }
+  .hero-content p { font-size: 1.15rem; opacity: .9; margin: 0; }
+  .card-hover { transition: transform .2s ease, box-shadow .2s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(0,0,0,.12); }
+  .w3-card, .w3-card-4 { border-radius: 12px !important; overflow: hidden; }
+  #projects img { border-radius: 8px; transition: transform .25s ease; }
+  #projects .w3-col:hover img { transform: scale(1.04); }
+  .skill-badge { display: inline-block; background: var(--bg-soft); color: var(--text-dark); border: 1px solid #e2e4e8; border-radius: 999px; padding: 7px 18px; margin: 5px; font-size: .9rem; font-weight: 500; }
+  .nav-links a { transition: color .2s ease; }
+  .past-projects { text-align: center; }
+  .past-projects summary {
+    cursor: pointer;
+    list-style: none;
+    display: inline-block;
+    font-family: 'Poppins', 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 28px;
+    margin: 8px auto 24px;
+    border: 2px solid var(--accent);
+    border-radius: 999px;
+    color: var(--accent);
+    transition: background .2s ease, color .2s ease;
+  }
+  .past-projects summary::-webkit-details-marker { display: none; }
+  .past-projects summary::marker { content: ""; }
+  .past-projects summary:hover { background: var(--accent); color: #fff; }
+  .past-projects summary::after { content: "  \25BC"; font-size: .7em; }
+  .past-projects[open] summary::after { content: "  \25B2"; }
+  @media (max-width: 700px) {
+    .nav-links { overflow-x: auto; white-space: nowrap; max-width: 62vw; }
+    .nav-links a { font-size: .82rem; padding: 8px 10px !important; }
+    .hero-content h1 { font-size: 2.1rem; }
+    .hero { height: 380px; }
+  }
+</style>
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -12,20 +71,22 @@
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
     <a href="#home" class="w3-bar-item w3-button"><b>Eric Huang</b>
     <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
+    <div class="w3-right nav-links">
       <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#coursework" class="w3-bar-item w3-button">Coursework</a>
+      <a href="#experience" class="w3-bar-item w3-button">Experience</a>
       <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+      <a href="#skills" class="w3-bar-item w3-button">Skills</a>
+      <a href="#coursework" class="w3-bar-item w3-button">Coursework</a>
       <a href="#contact" class="w3-bar-item w3-button">Contact</a>
     </div>
   </div>
 </div>
 
 <!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="SNbPyeWzyFHy_1500_500.png" alt="background" width="1500" height="900">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <!--<h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-off"><b>Eric Huang</b></span></h1>-->
+<header class="hero" id="home">
+  <div class="hero-content">
+    <h1>Eric Huang</h1>
+    <p>Software Engineer at Epic Systems &middot; UC Berkeley &rsquo;25</p>
   </div>
 </header>
 
@@ -35,19 +96,41 @@
   <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="font-size:25px">ABOUT ME</h3>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
-      <img src="seniorpic.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Senior pic" width="400" height = auto>
+      <img src="seniorpic.jpg" class="w3-round w3-image" alt="Eric Huang" width="400" style="box-shadow:0 10px 30px rgba(0,0,0,.15);">
     </div>
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-padding-large">
       <p style="font-size:24px;" align=left>
-     	Hello, I'm Eric! I am an undergraduate student at University of California, Berkeley double majoring in Electrical Engineering and Computer Science, and Data Science. Here's what I've been up to over the past few years!</p>
-      <a href="Resume SWE 9-7-2024.pdf" target="_blank">
-    <button class="w3-button w3-black w3-section" type="submit">
+     	Hello, I'm Eric! I'm a Software Engineer at Epic Systems. I graduated from UC Berkeley in May 2025 with a double major in Electrical Engineering / Computer Science and Data Science and a minor in Statistics. Here's a look at my recent work and projects!</p>
+      <a href="Resume SWE 8-23-2026.pdf" target="_blank">
+    <button class="w3-button btn-accent w3-section" type="submit">
         <i class="fa fa-paper-plane"></i> Resum&eacute;
       </button></a>
     </div>
   </div>
+</div>
+
+<!-- Experience Section -->
+<div class="w3-container w3-center w3-padding-40" id="experience">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="font-size:25px">EXPERIENCE</h3>
+  <div class="w3-row-padding">
+    <div class="w3-col m6 w3-margin-bottom">
+      <div class="w3-card card-hover w3-padding w3-white" style="height:100%;">
+        <h3 style="margin-bottom:2px;">Software Engineer</h3>
+        <p class="w3-opacity" style="margin-top:0;">Epic Systems | June 2025 - Present</p>
+        <p align="left">Building and maintaining full-stack features for Epic's Tapestry - Medical Management application, supporting scalable workflows used by healthcare organizations nationwide. Collaborate cross-functionally with product teams and customers to deliver safe, intuitive, high-quality healthcare software.</p>
+      </div>
+    </div>
+    <div class="w3-col m6 w3-margin-bottom">
+      <div class="w3-card card-hover w3-padding w3-white" style="height:100%;">
+        <h3 style="margin-bottom:2px;">Software Engineer</h3>
+        <p class="w3-opacity" style="margin-top:0;">UC Berkeley | January 2025 - July 2025</p>
+        <p align="left">Designed and developed a full-stack SaaS platform used by UC Berkeley students and staff to support academic and administrative workflows, partnering with professors, researchers, and students to translate user needs into production features.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <style>
 * {
@@ -83,48 +166,41 @@
     }
 }
 </style>
-<!-- <div class="w3-container w3-border-light-grey w3-center w3-padding-16" id="coursework"> -->
-	<div class="w3-container w3-border-light-grey w3-center w3-row w3-center w3-light-grey w3-padding-16" id="coursework">
-		<div class="w3-container w3-center w3-padding-42 w3-margin-bottom">
-			<h3 style="font-size: 25px" class="w3-border-bottom w3-border-light-black w3-padding-16"> COURSEWORK</h3>
-		</div>
-		<div class="row">
-		  <div align="left" class="column3">
-		  	<h1 style="font-size: 20px">COMPUTER SCIENCE:</h1>
-        <p>Data Structures & Algorithms-<a href="https://inst.eecs.berkeley.edu/~cs61b/sp22/" title="CS 61B class website" target="_blank">CS61B</a></p>
-        <p>Machine Structures-<a href="https://cs61c.org/fa22/" title="CS 61C class website" target="_blank">CS61C</a></p>
-        <p>Discrete Math & Probability Theory-<a href="http://www.eecs70.org/" title="CS 70 class website" target="_blank">CS70</a></p>
-        <p>Computer Security-<a href="https://fa22.cs161.org/" title="CS 161 class website" target="_blank">CS161</a></p>
-        <p>Operating Systems and System Programming-<a href="https://cs162.org/" title="CS 162 class website" target="_blank">CS162</a></p>
-		  	<p>Efficient Algorithms & Intractable Problems-<a href="https://cs170.org/" title="CS 170 class website" target="_blank">CS170</a></p>
-        <p>Cryptography-<a href="https://eecs171.com/" title="CS 171 class website" target="_blank">CS171</a></p>
-        <p>Introduction to Database Systems-<a href="https://cs186berkeley.net/" title="CS 186 class website" target="_blank">CS186</a></p>
-				<p>Introduction to Artificial Intelligence-<a href="https://inst.eecs.berkeley.edu/~cs188/fa22/" title="CS 188 class website" target="_blank">CS188</a></p>				
-			</div>
-			<div align="left" class="column3">
-				<h1 style="font-size: 20px">DATA SCIENCE:</h1>
-				<p>The Foundations of Data Science-<a href="http://www.data8.org/sp23/" title="Data 8 class website" target="_blank">DATA 8</a></p>
-				<p>Principles and Techniques of Data Science-<a href="https://ds100.org/su23/" title="Data 100 class website" target="_blank">DATA 100</a></p>
-				<p>Concepts of Probability-<a title="STAT 134 class website" target="_blank">STAT 134</a></p>    
-
-			</div>
-			<div align="left" class="column3">
-				<h1 style="font-size: 20px">ELECTRICAL ENGINEERING:</h1>
-				<p>Designing Information Systems I-<a href="http://inst.eecs.berkeley.edu/~ee16a/fa21/" title="EE16A class website" target="_blank">EE16A</a></p>
-				<p>Designing Information Systems II-<a href="http://inst.eecs.berkeley.edu/~ee16b/sp22/" title="EE16B class website" target="_blank">EE16B</a></p>
-				<p>Optimization Models in Engineering-<a href="https://eecs127.github.io/" title="EE127 class website" target="_blank">EECS127</a></p>
-			</div>
-		</div>
-	</div>
-<!-- </div> -->
-<div class=row>
-	<h3 style="font-size: 40px"> </h3>
-</div>
 <!-- Projects Section -->
 <div class="w3-row-padding w3-light-grey w3-padding-16" >
 	<div class="w3-container w3-center" id="projects">
     	<h3 style="font-size: 25px" class="w3-border-bottom w3-border-light-black w3-padding-16">PROJECTS</h3>
 	</div>
+	<div class="w3-container w3-center w3-margin-bottom">
+		<h1 style="font-size: 20px">RECENT WORK</h1>
+	</div>
+	<div class="w3-col l4 m12 w3-margin-bottom w3-padding">
+		<div class="w3-card-4 card-hover w3-white w3-padding" style="height:100%;">
+			<h3 style="margin-bottom:0;">Long Term Services and Support (LTSS)</h3>
+			<p class="w3-opacity" style="margin-top:2px;">Epic Systems</p>
+			<p align="left">Developed the LTSS service ordering workflow, enabling care managers to place detailed orders for recommended services based on member assessments, and automated the downstream creation of referrals and authorizations.</p>
+		</div>
+	</div>
+	<div class="w3-col l4 m12 w3-margin-bottom w3-padding">
+		<div class="w3-card-4 card-hover w3-white w3-padding" style="height:100%;">
+			<h3 style="margin-bottom:0;">Caseload Balancing</h3>
+			<p class="w3-opacity" style="margin-top:2px;">Epic Systems</p>
+			<p align="left">Implemented an automated assignment system that reduced manual coordination by intelligently assigning care managers and case teams to episodes of care, plus tooling to audit the assignment algorithm.</p>
+		</div>
+	</div>
+	<div class="w3-col l4 m12 w3-margin-bottom w3-padding">
+		<div class="w3-card-4 card-hover w3-white w3-padding" style="height:100%;">
+			<h3 style="margin-bottom:0;">Flextensions</h3>
+			<p class="w3-opacity" style="margin-top:2px;">UC Berkeley</p>
+			<p align="left">A full-stack platform that simplifies assignment extension management across UC Berkeley courses by automating requests, approvals, and notifications to third-party applications.</p>
+			<a href="https://flextensions.berkeley.edu/" target="_blank">Visit site &rarr;</a>
+		</div>
+	</div>
+</div>
+
+<details class="past-projects">
+	<summary>PAST PROJECTS</summary>
+	<div class="w3-row-padding w3-light-grey w3-padding-16">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <h3>Blocks</h3>
       <a href="https://inst.eecs.berkeley.edu/~cs61b/sp22/materials/proj/proj0/index.html" target="_blank">
@@ -283,8 +359,54 @@
       virtual memory, kernel development, low-level programming, synchronization, and debugging.</p>
   </div>
 </div>
-<p>To follow Berkeley's academic integrity policies, I will not post any of my work online. If you would like to see my code or work, feel free to contact me below!</p>
+<p>To follow Berkeley's academic integrity policies, I will not post any of my older coursework online. If you would like to see my code or work, feel free to contact me below!</p>
+</details>
 
+<!-- Skills Section -->
+<div class="w3-container w3-center w3-padding-40" id="skills">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="font-size:25px">SKILLS &amp; EXPERTISE</h3>
+  <div style="max-width:900px;margin:auto;">
+    <span class="skill-badge">SQL</span><span class="skill-badge">Regex</span><span class="skill-badge">PostGres</span><span class="skill-badge">Go</span><span class="skill-badge">Java</span><span class="skill-badge">C</span><span class="skill-badge">C++</span><span class="skill-badge">C#</span><span class="skill-badge">Python</span><span class="skill-badge">Ruby on Rails</span><span class="skill-badge">Next.js</span><span class="skill-badge">HTML5</span><span class="skill-badge">XML</span><span class="skill-badge">JavaScript</span><span class="skill-badge">TypeScript</span><span class="skill-badge">React</span><span class="skill-badge">Node</span><span class="skill-badge">Git</span><span class="skill-badge">SVN</span><span class="skill-badge">Docker</span><span class="skill-badge">Linux</span><span class="skill-badge">Unix</span><span class="skill-badge">Visual Studio</span><span class="skill-badge">CI/CD</span><span class="skill-badge">UI/UX Design</span><span class="skill-badge">AWS</span><span class="skill-badge">Database Design</span><span class="skill-badge">System Design</span><span class="skill-badge">API Development</span><span class="skill-badge">Test Driven Development</span><span class="skill-badge">DevOps</span><span class="skill-badge">Agile</span><span class="skill-badge">Scrum</span><span class="skill-badge">MVC Development</span><span class="skill-badge">Backend</span><span class="skill-badge">Frontend</span><span class="skill-badge">Data Models</span><span class="skill-badge">Optimization</span><span class="skill-badge">ML and AI Agents</span>
+  </div>
+</div>
+
+<!-- <div class="w3-container w3-border-light-grey w3-center w3-padding-16" id="coursework"> -->
+	<div class="w3-container w3-border-light-grey w3-center w3-row w3-center w3-light-grey w3-padding-16" id="coursework">
+		<div class="w3-container w3-center w3-padding-42 w3-margin-bottom">
+			<h3 style="font-size: 25px" class="w3-border-bottom w3-border-light-black w3-padding-16"> COURSEWORK</h3>
+		</div>
+		<div class="row">
+		  <div align="left" class="column3">
+		  	<h1 style="font-size: 20px">COMPUTER SCIENCE:</h1>
+        <p>Data Structures & Algorithms-<a href="https://inst.eecs.berkeley.edu/~cs61b/sp22/" title="CS 61B class website" target="_blank">CS61B</a></p>
+        <p>Machine Structures-<a href="https://cs61c.org/fa22/" title="CS 61C class website" target="_blank">CS61C</a></p>
+        <p>Discrete Math & Probability Theory-<a href="http://www.eecs70.org/" title="CS 70 class website" target="_blank">CS70</a></p>
+        <p>Computer Security-<a href="https://fa22.cs161.org/" title="CS 161 class website" target="_blank">CS161</a></p>
+        <p>Operating Systems and System Programming-<a href="https://cs162.org/" title="CS 162 class website" target="_blank">CS162</a></p>
+		  	<p>Efficient Algorithms & Intractable Problems-<a href="https://cs170.org/" title="CS 170 class website" target="_blank">CS170</a></p>
+        <p>Cryptography-<a href="https://eecs171.com/" title="CS 171 class website" target="_blank">CS171</a></p>
+        <p>Introduction to Database Systems-<a href="https://cs186berkeley.net/" title="CS 186 class website" target="_blank">CS186</a></p>
+				<p>Introduction to Artificial Intelligence-<a href="https://inst.eecs.berkeley.edu/~cs188/fa22/" title="CS 188 class website" target="_blank">CS188</a></p>				
+			</div>
+			<div align="left" class="column3">
+				<h1 style="font-size: 20px">DATA SCIENCE:</h1>
+				<p>The Foundations of Data Science-<a href="http://www.data8.org/sp23/" title="Data 8 class website" target="_blank">DATA 8</a></p>
+				<p>Principles and Techniques of Data Science-<a href="https://ds100.org/su23/" title="Data 100 class website" target="_blank">DATA 100</a></p>
+				<p>Concepts of Probability-<a title="STAT 134 class website" target="_blank">STAT 134</a></p>    
+
+			</div>
+			<div align="left" class="column3">
+				<h1 style="font-size: 20px">ELECTRICAL ENGINEERING:</h1>
+				<p>Designing Information Systems I-<a href="http://inst.eecs.berkeley.edu/~ee16a/fa21/" title="EE16A class website" target="_blank">EE16A</a></p>
+				<p>Designing Information Systems II-<a href="http://inst.eecs.berkeley.edu/~ee16b/sp22/" title="EE16B class website" target="_blank">EE16B</a></p>
+				<p>Optimization Models in Engineering-<a href="https://eecs127.github.io/" title="EE127 class website" target="_blank">EECS127</a></p>
+			</div>
+		</div>
+	</div>
+<!-- </div> -->
+<div class=row>
+	<h3 style="font-size: 40px"> </h3>
+</div>
 
   <!-- Contact Section -->
   <div class="w3-container w3-center w3-padding-32" id="contact">
@@ -295,7 +417,7 @@
       <input class="w3-input w3-section" type="text" placeholder="Email" required name="Email">
       <input class="w3-input w3-section" type="text" placeholder="Subject" required name="Subject">
       <input class="w3-input w3-section" type="text" placeholder="Comment" required name="Comment">
-      <button class="w3-button w3-black w3-section" type="submit">
+      <button class="w3-button btn-accent w3-section" type="submit">
         <i class="fa fa-paper-plane"></i> SEND MESSAGE
       </button>
     </form>
